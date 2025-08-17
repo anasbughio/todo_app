@@ -1,0 +1,136 @@
+.body{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    width: 100vw;
+    height: 100vh;   
+}
+
+.todo-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo-form  input{
+     padding: 12px 16px;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 70px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #888;
+  outline: none;
+  width: 50%;
+  transition: 0.3s ease;
+}
+
+.todo-form input:focus {
+  border-bottom: 2px solid #00bcd4;
+  box-shadow: 0 2px 10px rgba(6, 226, 255, 0.3);
+}
+
+/* Optional: animate placeholder */
+.todo-form input::placeholder {
+  color: #aaa;
+  transition: 0.3s ease;
+}
+
+.todo-form input:focus::placeholder {
+  color: #00bcd4;
+}
+
+.todo-form button {
+  padding: 12px 24px;
+  width: 20%;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.todo-form button:hover {
+  background-color: #0199b5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.todo-form button:active {
+  transform: scale(0.98);
+}
+
+
+ul {
+   list-style: none;
+  padding: 0;
+  margin: 0 auto; /* centers horizontally */
+  width: 100%;
+  max-width: 800px; 
+  margin-top: 50px;
+  
+}
+
+li {
+  background-color: #1a2b3c;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Task text (span) */
+li span {
+  flex-grow: 1;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* List input (edit mode) */
+li input[type="text"] {
+  flex-grow: 1;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 15px;
+  background-color: #2f3e4d;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Buttons (Edit, Delete, Update, Cancel) */
+li button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+}
+
+li button:hover {
+  background-color: #0199b5;
+  transform: translateY(-1px);
+}
+
+li button:active {
+  transform: scale(0.95);
+}
+
+/* Completed task (line-through) */
+li span.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
