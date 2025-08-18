@@ -1,7 +1,9 @@
 {
   "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "cd Backend && npm install",
-    "startCommand": "npm start --prefix Backend"
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "workdir": "Backend"
   }
 }
