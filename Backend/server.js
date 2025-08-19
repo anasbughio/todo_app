@@ -11,14 +11,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-app.use(cors({
-  origin: [
-    "http://localhost:3000", 
-    "https://todo-app-blush-omega-33.vercel.app"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "https://todo-app-git-main-anas-projects-ddcc6eed.vercel.app",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use('/api/todos',todoRoutes);
 
