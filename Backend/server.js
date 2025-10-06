@@ -13,7 +13,10 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://todo-app-git-main-anas-projects-ddcc6eed.vercel.app",
+    origin: [
+      "https://todo-app-git-main-anas-projects-ddcc6eed.vercel.app",
+      "https://todo-app-blush-omega-33.vercel.app",
+    ],
     credentials: true,
   })
 );
